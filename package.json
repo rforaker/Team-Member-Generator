@@ -1,0 +1,16 @@
+{
+  "name": "Team Profile Generator",
+  "version": "1.0.0",
+  "description": "Generates team profile dynamically",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [],
+  "author": "Robert Foraker",
+  "license": "MIT",
+  "dependencies": {
+    "inquirer": "^8.2.4",
+    "jest": "^24.9.0"
+  }
+}
