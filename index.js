@@ -161,5 +161,11 @@ function finishHtml() {
     
 </body>
 </html>`;
-        
+    fs.appendFile("./dist/team.html", html, function (err) {
+        if (err) {
+            console.log(err);
+        };
+    });
+    console.log("end");
+}
 startApp();
