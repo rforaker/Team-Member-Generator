@@ -111,7 +111,7 @@ function addHtml(employee) {
         if (role === "Engineer") {
             const gitHub = employee.getGithub();
             data = `<div class="col-6">
-            <div class="card bg-primary" style="width: 18rem">
+            <div class="card bg-primary mx-auto mb-3" style="width: 18rem">
             <h5 class="card-header">${name}<br /><br />👩‍🔬 Engineer</h5>
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">ID: ${id}</li>
@@ -166,6 +166,6 @@ function finishHtml() {
             console.log(err);
         };
     });
-    console.log("end");
+    console.log("Done.");
 }
 startApp();
