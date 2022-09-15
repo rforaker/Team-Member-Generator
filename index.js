@@ -120,5 +120,18 @@ function addHtml(employee) {
             </ul>
             </div>
         </div>`;
+        } else if (role === "Intern") {
+            const school = employee.getSchool();
+            data = `<div class="col-6">
+            <div class="card bg-primary mx-auto mb-3" style="width: 18rem">
+            <h5 class="card-header">${name}<br /><br />🏫 Intern</h5>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">ID: ${id}</li>
+                <li class="list-group-item">Email Address: ${email}</li>
+                <li class="list-group-item">School: ${school}</li>
+            </ul>
+            </div>
+        </div>`;
         }
+        
 startApp();
