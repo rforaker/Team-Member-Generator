@@ -132,6 +132,34 @@ function addHtml(employee) {
             </ul>
             </div>
         </div>`;
+        } else {
+            const officePhone = employee.getOfficeNumber();
+            data = `<div class="col-6">
+            <div class="card bg-primary mx-auto mb-3" style="width: 18rem">
+            <h5 class="card-header">${name}<br /><br />☕ Manager</h5>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">ID: ${id}</li>
+                <li class="list-group-item">Email Address: ${email}</li>
+                <li class="list-group-item">Office Phone: ${officePhone}</li>
+            </ul>
+            </div>
+        </div>`
         }
+        console.log("Adding employees to HTML...");
+        fs.appendFile("./dist/team.html", data, function (err) {
+            if (err) {
+                return reject(err);
+            };
+            return resolve();
+        });
+    });   
+}
+
+function finishHtml() {
+    const html = ` </div>
+    </div>
+    
+</body>
+</html>`;
         
 startApp();
